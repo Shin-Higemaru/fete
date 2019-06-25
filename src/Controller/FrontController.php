@@ -18,6 +18,6 @@ class FrontController extends AbstractController {
     public function index(){
         $em= $this->getDoctrine()->getManager();
         $events = $em->getRepository(Event::class)->findAll();
-        return $this->render("coco.html.twig", [ "toto"=>"titi", "nom"=>"everybody"]);
+        return $this->render("coco.html.twig", [ "events"=>$events]);
     }
 }
