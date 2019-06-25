@@ -27,6 +27,16 @@ class Event
     private $dday;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $adresse;
@@ -61,6 +71,30 @@ class Event
     public function setDday(\DateTimeInterface $dday): self
     {
         $this->dday = $dday;
+
+        return $this;
+    }
+
+    public function getcreatedAt(): ?\DateTimeInterface
+{
+    return $this->createdAt;
+}
+
+    public function setcreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->$createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getupdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setupdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->$updatedAt = $updatedAt;
 
         return $this;
     }
