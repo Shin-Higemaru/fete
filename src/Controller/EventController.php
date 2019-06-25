@@ -14,12 +14,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class EventController extends AbstractController{
 
     /**
+     *
      * @Route("/creer-un-evenement", name="create-event")
      */
     public function newEvent(Request $req){
 //        dump($req);
 //        die($req);
         $event = new Event();
+        $event->setcreatedAt(new \DateTime());
+        $event->setupdatedAt(new \DateTime());
 
         $form = $this->createFormBuilder( $event )
             ->add("name", null, ["label"=>"Nom "])

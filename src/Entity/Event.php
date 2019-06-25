@@ -75,26 +75,26 @@ class Event
         return $this;
     }
 
-    public function getcreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
 {
     return $this->createdAt;
 }
 
-    public function setcreatedAt(\DateTimeInterface $createdAt): self
+    public function setCreatedAt(\DateTimeInterface $creer): self
     {
-        $this->$createdAt = $createdAt;
+        $this->createdAt = $creer;
 
         return $this;
     }
 
-    public function getupdatedAt(): ?\DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
-    public function setupdatedAt(\DateTimeInterface $updatedAt): self
+    public function setUpdatedAt(\DateTimeInterface $maj): self
     {
-        $this->$updatedAt = $updatedAt;
+        $this->updatedAt = $maj;
 
         return $this;
     }

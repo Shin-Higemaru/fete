@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bef1300-76dd-44f1-b6e1-b96ec18d647b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/fete.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fete.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/coco.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/coco.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +49,13 @@
         <item name="projet-fete: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="event: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="projet-fete@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="projet-fete: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="migration_versions: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -75,7 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
+            <state relative-caret-position="100">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding>
                 <element signature="e#36#57#0#PHP" expanded="true" />
                 <element signature="e#1256#1263#1#PHP" expanded="true" />
@@ -89,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/templates/coco.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -97,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+            <state relative-caret-position="185">
+              <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -303,22 +306,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561449908231</updated>
-      <workItem from="1561449909481" duration="12347000" />
+      <workItem from="1561449909481" duration="13867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12347000" />
+    <option name="totallyTimeSpent" value="13867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Database Changes" weight="0.3285968" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" sideWeight="0.49959514" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50040483" side_tool="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Console" weight="0.3285968" />
@@ -329,7 +333,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="right" id="Database" visible="true" weight="0.32955465" />
+      <window_info anchor="right" id="Database" weight="0.32955465" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -376,23 +380,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/FrontController.php">
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190625130847.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <element signature="e#36#57#0#PHP" expanded="true" />
-            <element signature="e#383#399#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fc2327a6-475b-4c12-9d7e-b97e4cba063e/schema/projet-fete/table/event">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
+        <state relative-caret-position="-146">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -405,9 +396,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://fc2327a6-475b-4c12-9d7e-b97e4cba063e/schema/projet-fete/table/event">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/coco.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#36#57#0#PHP" expanded="true" />
+            <element signature="e#383#399#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
+        <state relative-caret-position="100">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
             <element signature="e#36#57#0#PHP" expanded="true" />
             <element signature="e#1256#1263#1#PHP" expanded="true" />
@@ -416,17 +435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/coco.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+        <state relative-caret-position="185">
+          <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
         </state>
       </provider>
     </entry>
