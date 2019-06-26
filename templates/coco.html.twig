@@ -1,2 +1,7 @@
-<p>halo halo this is the vue</p>
+<h1>Les évènements</h1>
 {#{{ dump(events) }}#}
+<ul>
+    {% for event in events %}
+        <li>{{ event.name }}</li>
+    {% endfor %}
+</ul>

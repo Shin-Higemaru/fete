@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Apprenez à coder avec des projets">
+        <title>{% block title %}Fêtes-vous plaisir{% endblock %}</title>
+
+        {% block stylesheets %}
+            <!-- Bootstrap core CSS -->
+            <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+{#            <link rel="stylesheet" href="{{ asset('css/padawan.css') }}">#}
+        {% endblock stylesheets %}
     </head>
     <body>
         {% block body %}{% endblock %}

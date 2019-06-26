@@ -46,6 +46,11 @@ class Event
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $endDay;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,9 +73,9 @@ class Event
         return $this->dday;
     }
 
-    public function setDday(\DateTimeInterface $dday): self
+    public function setDday(\DateTimeInterface $jour): self
     {
-        $this->dday = $dday;
+        $this->dday = $jour;
 
         return $this;
     }
@@ -104,9 +109,9 @@ class Event
         return $this->adresse;
     }
 
-    public function setAdresse(string $adresse): self
+    public function setAdresse(string $lieu): self
     {
-        $this->adresse = $adresse;
+        $this->adresse = $lieu;
 
         return $this;
     }
@@ -119,6 +124,18 @@ class Event
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getEndDay(): ?\DateTimeInterface
+    {
+        return $this->endDay;
+    }
+
+    public function setEndDay(\DateTimeInterface $endDay): self
+    {
+        $this->endDay = $endDay;
 
         return $this;
     }
