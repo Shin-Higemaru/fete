@@ -70,6 +70,17 @@ class Event
      */
     private $imageName;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="eventsCreated")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $creator;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_private;
+
 
 
     public function getId(): ?int
@@ -194,5 +205,29 @@ class Event
     public function getImageName(): ?string
     {
         return $this->imageName;
+    }
+
+    public function getCreator(): ?User
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(?User $creator): self
+    {
+        $this->creator = $creator;
+
+        return $this;
+    }
+
+    public function getIsPrivate(): ?bool
+    {
+        return $this->is_private;
+    }
+
+    public function setIsPrivate(bool $is_private): self
+    {
+        $this->is_private = $is_private;
+
+        return $this;
     }
 }

@@ -18,8 +18,15 @@ class FrontController extends AbstractController {
     public function index(){
         $em= $this->getDoctrine()->getManager();
         $events = $em->getRepository(Event::class)->findAll();
-        $users = $em->getRepository(User::class)->findAll();
-//        dump($users);
+
+        // On verifie si on a tout nos users
+//        $users = $em->getRepository(User::class)->findAll();
+        //        dump($user);
+//                die();
+
+        // une fois fait on recupère notre user
+        $user = $this->getUser();
+//        dump($user);
 //        die();
 
         return $this->render("coco.html.twig", [ "events"=>$events]);

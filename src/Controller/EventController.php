@@ -19,14 +19,17 @@ class EventController extends AbstractController{
      * @Route("/creer-un-evenement", name="create-event")
      */
     public function newEvent(Request $req){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
 //        dump($req);
 //        die($req);
         $event = new Event();
+        $event->setCreator($this->getUser());
         $event->setcreatedAt(new \DateTime());
         $event->setupdatedAt(new \DateTime());
 
         $form = $this->createForm(EventType::class, $event);
-//        $form->handleRequest($req);
+        $form->handleRequest($req);
 
         //Enregistrer dans la BDD nos events
         if($form->isSubmitted() && $form->isValid()){

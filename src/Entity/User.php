@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -47,6 +49,16 @@ class User implements UserInterface
      * @ORM\Column(type="boolean")
      */
     private $is_company;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Event", mappedBy="creator", orphanRemoval=true)
+     */
+    private $eventsCreated;
+
+    public function __construct()
+    {
+        $this->eventsCreated = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -159,6 +171,37 @@ class User implements UserInterface
     public function setIsCompany(bool $is_company): self
     {
         $this->is_company = $is_company;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Event[]
+     */
+    public function getEventsCreated(): Collection
+    {
+        return $this->eventsCreated;
+    }
+
+    public function addEventsCreated(Event $eventsCreated): self
+    {
+        if (!$this->eventsCreated->contains($eventsCreated)) {
+            $this->eventsCreated[] = $eventsCreated;
+            $eventsCreated->setCreator($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEventsCreated(Event $eventsCreated): self
+    {
+        if ($this->eventsCreated->contains($eventsCreated)) {
+            $this->eventsCreated->removeElement($eventsCreated);
+            // set the owning side to null (unless already changed)
+            if ($eventsCreated->getCreator() === $this) {
+                $eventsCreated->setCreator(null);
+            }
+        }
 
         return $this;
     }
