@@ -43,6 +43,12 @@ class User implements UserInterface
      */
     private $lastname;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_company;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -144,4 +150,17 @@ class User implements UserInterface
 
         return $this;
     }
+
+    public function getIsCompany(): ?bool
+    {
+        return $this->is_company;
+    }
+
+    public function setIsCompany(bool $is_company): self
+    {
+        $this->is_company = $is_company;
+
+        return $this;
+    }
+
 }
