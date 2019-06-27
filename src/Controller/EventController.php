@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Event;
+use App\Form\EventType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
@@ -24,16 +25,8 @@ class EventController extends AbstractController{
         $event->setcreatedAt(new \DateTime());
         $event->setupdatedAt(new \DateTime());
 
-        $form = $this->createFormBuilder( $event )
-            ->add("name", null, ["label"=>"Nom "])
-            ->add("dday", DateTimeType::class, ["label"=>"Date de début "])
-            ->add("endday", DateTimeType::class, ["label"=>"Date de fin "])
-            ->add("adresse", null, ["label"=>"adresse "])
-            ->add("description", null, ["label"=>"description "])
-            ->add("valider", SubmitType::class)
-            ->getForm();
-
-        $form->handleRequest($req);
+        $form = $this->createForm(EventType::class, $event);
+//        $form->handleRequest($req);
 
         //Enregistrer dans la BDD nos events
         if($form->isSubmitted() && $form->isValid()){

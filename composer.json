@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "sensio/framework-extra-bundle": "^5.3",
+        "symfony/asset": "4.3.*",
         "symfony/console": "4.3.*",
         "symfony/dotenv": "4.3.*",
         "symfony/flex": "^1.1",
@@ -15,7 +16,8 @@
         "symfony/security-bundle": "4.3.*",
         "symfony/translation": "4.3.*",
         "symfony/twig-bundle": "4.3.*",
-        "symfony/yaml": "4.3.*"
+        "symfony/yaml": "4.3.*",
+        "vich/uploader-bundle": "^1.9"
     },
     "config": {
         "preferred-install": {
