@@ -17,6 +17,7 @@ class EventType extends AbstractType
             ->add("endday", DateTimeType::class, ["label"=>"Date de fin "])
             ->add("adresse", null, ["label"=>"adresse "])
             ->add("description", null, ["label"=>"description "])
+            ->add("is_private", null, ["label"=>"Privé ?"])
             ->add('imageFile',VichFileType::class)
             ->add("valider", SubmitType::class)
         ;

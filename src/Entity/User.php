@@ -55,6 +55,21 @@ class User implements UserInterface
      */
     private $eventsCreated;
 
+    /**
+     * @ORM\Column(type="string", length=181)
+     */
+    private $pseudo;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_admin;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_guest;
+
     public function __construct()
     {
         $this->eventsCreated = new ArrayCollection();
@@ -202,6 +217,42 @@ class User implements UserInterface
                 $eventsCreated->setCreator(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getIsAdmin(): ?bool
+    {
+        return $this->is_admin;
+    }
+
+    public function setIsAdmin(bool $is_admin): self
+    {
+        $this->is_admin = $is_admin;
+
+        return $this;
+    }
+
+    public function getIsGuest(): ?bool
+    {
+        return $this->is_guest;
+    }
+
+    public function setIsGuest(bool $is_guest): self
+    {
+        $this->is_guest = $is_guest;
 
         return $this;
     }

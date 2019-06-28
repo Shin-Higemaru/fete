@@ -77,7 +77,7 @@ class Event
     private $creator;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable= false)
      */
     private $is_private;
 

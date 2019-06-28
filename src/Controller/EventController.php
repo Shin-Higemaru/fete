@@ -27,6 +27,7 @@ class EventController extends AbstractController{
         $event->setCreator($this->getUser());
         $event->setcreatedAt(new \DateTime());
         $event->setupdatedAt(new \DateTime());
+//        $event->setIsPrivate();
 
         $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($req);
@@ -57,6 +58,7 @@ class EventController extends AbstractController{
             ->add("dday", null, ["label"=>"Quand ? "])
             ->add("adresse", null, ["label"=>"adresse "])
             ->add("description", null, ["label"=>"description "])
+            ->add("is_private", null, ["label"=>"privé ?"])
             ->add("valider", SubmitType::class)
             ->getForm();
 

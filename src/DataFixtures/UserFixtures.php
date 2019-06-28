@@ -26,6 +26,11 @@ class UserFixtures extends Fixture
         $user->setLastname('YILDIZ');
         $user->setEmail('Shijinboshi@hotmail.fr');
         $user->setRoles(['ROLE_USER','ROLE_ADMIN']);
+        $user->setPseudo('Higemaru');
+        $user->setIsCompany(1);
+        $user->setIsAdmin(1);
+        $user->setIsGuest(0);
+
 
         $manager->persist($user);
 
